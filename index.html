@@ -1,99 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Blogr]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
+    <title>Frontend Mentor | [Blogr]</title>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__bar">
+        <a href="#" class="logo">
+          <img class="logo__img" src="./images/logo.svg" alt="Blogr" />
+        </a>
+        <button type="button" class="header__menu">
+          <img src="./images/icon-hamburger.svg" />
+        </button>
+      </div>
 
-  Company
+      <nav class="navigation">
+        Product Overview Pricing Marketplace Features Integrations Company About
+        Team Blog Careers Connect Contact Newsletter LinkedIn
+        <a href="#login"></a>
+        <a href="#sign-up">Sign Up</a>
+      </nav>
 
-  About
-  Team
-  Blog
-  Careers
+      <section class="hero">
+        <h1 class="hero__title">A modern publishing platform</h1>
+        <p class="hero__subtitle">
+          Grow your audience and build your online brand
+        </p>
 
-  Connect
+        <div class="hero__actions">
+          <a href="#start-for-free" class="hero__btn hero__btn--primary"
+            >Start for Free</a
+          >
+          <a href="learn-more" class="hero__btn hero__btn--secondary"
+            >Learn More</a
+          >
+        </div>
+      </section>
+    </header>
 
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
+    <main class="main">
+      <section class="section">
+        <h2 class="section__title">Designed for the future</h2>
+        <picture>
+          <source
+            srcset="images/illustration-editor-desktop.svg"
+            media="(width >= 376px)"
+          />
+        </picture>
+        <img
+          src="./images/illustration-editor-mobile.svg"
+          class="section__img"
+          alt=""
+        />
+        <article class="card">
+          <h3 class="card__title">Introducing an extensible editor</h3>
+          <p class="card__description">
+            Blogr features an exceedingly intuitive interface which lets you
+            focus on one thing: creating content. The editor supports management
+            of multiple blogs and allows easy manipulation of embeds such as
+            images, videos, and Markdown. Extensibility with plugins and themes
+            provide easy ways to add functionality or change the looks of a
+            blog.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Robust content management</h3>
+          <p class="card__description">
+            Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized
+            categories, sections, format, or flow. With this functionality,
+            you’re in full control.
+          </p>
+        </article>
+      </section>
 
-  A modern publishing platform
-  Grow your audience and build your online brand
+      <section class="section section--dark">
+        <img
+          src="./images/illustration-phones.svg"
+          class="section__img section__img--position"
+        />
+        <article class="card card--dark">
+          <h3 class="card__title card__title--dark">
+            State of the Art Infrastructure
+          </h3>
+          <p class="card__description card__description--dark">
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </article>
+      </section>
+      <section class="section">
+        <picture>
+          <source
+            srcset="./images/illustration-laptop-desktop.svg"
+            media="(width >= 376px)"
+          />
+        </picture>
+        <img
+          src="./images/illustration-laptop-mobile.svg"
+          class="section__img"
+          alt=""
+        />
+        <article class="card">
+          <h3 class="card__title">Free, open, simple</h3>
+          <p class="card__description">
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics. The architecture is clean and is relatively easy to
+            learn.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Powerful tooling</h3>
+          <p class="card__description">
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </article>
+      </section>
+    </main>
 
-  Start for Free
-  Learn More
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    <footer class="attribution">
+      Product Overview Pricing Marketplace Features Integrations Company About
+      Team Blog Careers Connect Contact Newsletter LinkedIn
+      <div>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>

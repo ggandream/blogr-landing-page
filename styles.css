@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Overpass";
+  src: url(./fonts/Overpass/Overpass-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(./fonts/Ubuntu/Ubuntu-Regular.ttf) format("truetype");
+}
+
+:root {
+  /*Primary*/
+  --red-500: hsl(356, 100%, 66%);
+  --red-400: hsl(355, 100%, 74%);
+  --blue-900: hsl(208, 49%, 24%);
+
+  /*Neutral*/
+  --white: hsl(0, 100%, 100%);
+  --gray-600: hsl(207, 13%, 34%);
+  --gray-900: hsl(240, 10%, 16%);
+
+  /*Gradient*/
+  /* Background gradient - intro/CTA mobile nav: */
+  --orange-300: hsl(13, 100%, 72%);
+  --red-550: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+  --purple-950: hsl(237, 17%, 21%);
+  --purple-900: hsl(237, 23%, 31%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: var(--gray-600);
+  min-height: 100dvh;
+}
+
+.header {
+  background: linear-gradient(
+    140deg,
+    var(--orange-300) 0%,
+    var(--red-550) 100%
+  );
+  padding: 58px 34px;
+  border-bottom-left-radius: 100px;
+}
+
+.header__bar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.logo__img {
+  width: 90px;
+}
+
+.header__menu {
+  border: 0px;
+  background: transparent;
+}
+
+.navigation {
+  display: none;
+}
+
+.hero {
+  color: var(--white);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  height: 400px;
+}
+
+.hero__title {
+  font-weight: 600;
+  font-size: 2.14rem;
+  line-height: 1.5;
+}
+
+.hero__subtitle {
+  font-weight: 200;
+  margin-top: 14px;
+  font-size: 1.2rem;
+}
+
+.hero__actions {
+  margin-top: 24px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.hero__btn {
+  font-family: "Ubuntu", Arial, Helvetica;
+  font-weight: 800;
+  border: 1px solid var(--white);
+  border-radius: 34px;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+.hero__btn--primary {
+  background-color: var(--white);
+  color: var(--red-400);
+}
+
+.hero__btn--secondary {
+  color: var(--white);
+}
+
+.main {
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 5px;
+  margin-bottom: 20px;
+  color: var(--blue-900);
+}
+
+.card {
+  padding: 5px 30px;
+}
+
+.section__img {
+  width: 376px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card__title {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: var(--blue-900);
+  font-weight: 500;
+}
+
+.card__description {
+  margin: 16px 0px;
+  padding: 10px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.section--dark {
+  background:
+    url("./images/bg-pattern-circles.svg") no-repeat,
+    linear-gradient(140deg, var(--purple-950) 0%, var(--purple-900) 100%);
+  background-size: 120%, cover;
+  border-radius: 0px 110px 0px 110px;
+  color: var(--white);
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 200px;
+}
+
+.card--dark {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.card__title--dark {
+  color: var(--white);
+}
+
+.section__img--position {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
