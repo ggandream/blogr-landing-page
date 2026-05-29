@@ -100,7 +100,7 @@ body {
 }
 
 .hero__actions {
-  margin-top: 24px;
+  margin-top: 44px;
 
   display: flex;
   justify-content: center;
@@ -139,7 +139,7 @@ body {
 }
 
 .section__title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   padding: 5px;
   margin-bottom: 20px;
@@ -157,7 +157,7 @@ body {
 }
 
 .card__title {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   line-height: 2.3rem;
   color: var(--blue-900);
   font-weight: 500;
@@ -199,6 +199,7 @@ body {
 
 .card__title--dark {
   color: var(--white);
+  font-size: 2.4rem;
 }
 
 .section__img--position {
@@ -209,23 +210,25 @@ body {
 }
 
 .footer {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Overpass", sans-serif;
   background-color: var(--gray-900);
   border-radius: 0px 100px 0px 0px;
   display: flex;
   flex-direction: column;
   color: var(--white);
-  padding: 50px;
+  padding: 80px 50px;
   text-align: center;
 }
 
 .footer__nav {
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .footer__nav-title {
   padding: 10px;
   margin-top: 20px;
+  font-size: 1.1rem;
 }
 
 .footer__nav-list {
@@ -235,6 +238,7 @@ body {
 }
 .footer__nav-item {
   font-weight: 100;
+  font-size: 1.1rem;
 }
 
 .footer__attribution > a {
