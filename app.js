@@ -8,7 +8,7 @@ $nav__items.forEach(function (nav__item) {
     nav__item.firstElementChild.classList.toggle("upsidedown");
 
     const isExpanded = nav__item.getAttribute("aria-expanded") === "true";
-    nav__item.setAttribute("aria-expanded", !isExpanded);
+    nav__item.setAttribute("aria-expanded", String(!isExpanded));
   });
 });
 
@@ -23,12 +23,12 @@ $header__menu.addEventListener("click", function () {
       "src",
       "./images/icon-close.svg",
     );
-    $dropdown.setAttribute("aria-hidden", false);
+    $dropdown.setAttribute("aria-hidden", String(false));
   } else {
     $header__menu.firstElementChild.setAttribute(
       "src",
       "./images/icon-hamburger.svg",
     );
-    $dropdown.setAttribute("aria-hidden", true);
+    $dropdown.setAttribute("aria-hidden", String(true));
   }
 });
