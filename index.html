@@ -20,20 +20,91 @@
   <body>
     <header class="header">
       <div class="header__bar">
-        <a href="#" class="logo">
+        <a href="/" class="logo" aria-label="Go to homepage">
           <img class="logo__img" src="./images/logo.svg" alt="Blogr" />
         </a>
-        <button type="button" class="header__menu">
-          <img src="./images/icon-hamburger.svg" />
+        <button type="button" class="header__menu" aria-label="Open Menu">
+          <img src="./images/icon-hamburger.svg" alt="Menu" />
         </button>
       </div>
 
-      <nav class="navigation">
-        Product Overview Pricing Marketplace Features Integrations Company About
-        Team Blog Careers Connect Contact Newsletter LinkedIn
-        <a href="#login"></a>
-        <a href="#sign-up">Sign Up</a>
-      </nav>
+      <div class="dropdown hidden" aria-hidden="false">
+        <nav class="nav" aria-label="Main Menu">
+          <ul class="nav__menu">
+            <li>
+              <button
+                class="nav__item"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav__dropdown__1"
+              >
+                Product
+                <img
+                  class="nav__item-arrow"
+                  src="images/icon-arrow-dark.svg"
+                  alt=""
+                />
+              </button>
+              <div class="nav__dropdown hidden" id="nav__dropdown__1">
+                <a href="#Overview">Overview</a>
+                <a href="#Pricing">Pricing</a>
+                <a href="#Marketplace">Marketplace</a>
+                <a href="#Features">Features</a>
+                <a href="#Integrations">Integrations</a>
+              </div>
+            </li>
+
+            <li>
+              <button
+                class="nav__item"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav__dropdown__2"
+              >
+                Company
+                <img
+                  class="nav__item-arrow"
+                  src="images/icon-arrow-dark.svg"
+                  alt=""
+                />
+              </button>
+
+              <div class="nav__dropdown hidden" id="nav__dropdown__2">
+                <a href="#About">About</a>
+                <a href="#Team">Team</a>
+                <a href="#Blog">Blog</a>
+                <a href="#Careers">Careers</a>
+              </div>
+            </li>
+
+            <li>
+              <button
+                class="nav__item"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav__dropdown__3"
+              >
+                Connect
+                <img
+                  class="nav__item-arrow"
+                  src="images/icon-arrow-dark.svg"
+                  alt=""
+                />
+              </button>
+
+              <div class="nav__dropdown hidden" id="nav__dropdown__3">
+                <a href="#Contact">Contact</a>
+                <a href="#Newsletter">Newsletter</a>
+                <a href="#LinkedIn">LinkedIn</a>
+              </div>
+            </li>
+          </ul>
+          <div class="nav__session">
+            <a href="#login" class="btn nav__btn--primary">Login</a>
+            <a href="#sign-up" class="btn nav__btn--secondary">Sign Up</a>
+          </div>
+        </nav>
+      </div>
 
       <section class="hero">
         <h1 class="hero__title">A modern publishing platform</h1>
@@ -42,12 +113,8 @@
         </p>
 
         <div class="hero__actions">
-          <a href="#start-for-free" class="hero__btn hero__btn--primary"
-            >Start for Free</a
-          >
-          <a href="learn-more" class="hero__btn hero__btn--secondary"
-            >Learn More</a
-          >
+          <a href="#start-for-free" class="btn btn--primary">Start for Free</a>
+          <a href="#learn-more" class="btn btn--secondary">Learn More</a>
         </div>
       </section>
     </header>
@@ -64,7 +131,7 @@
         <img
           src="./images/illustration-editor-mobile.svg"
           class="section__img"
-          alt=""
+          alt="An abstract graphic illustration."
         />
         <article class="card">
           <h3 class="card__title">Introducing an extensible editor</h3>
@@ -92,6 +159,8 @@
         <img
           src="./images/illustration-phones.svg"
           class="section__img section__img--position"
+          alt="Two smarthphones. The left one displays an orange screen with the central white text 'Blogr'.
+          The right one shows a white interface."
         />
         <article class="card card--dark">
           <h3 class="card__title card__title--dark">
@@ -115,7 +184,7 @@
         <img
           src="./images/illustration-laptop-mobile.svg"
           class="section__img"
-          alt=""
+          alt="A laptop showing a desktop web layout wireframe."
         />
         <article class="card">
           <h3 class="card__title">Free, open, simple</h3>
@@ -140,30 +209,34 @@
     </main>
 
     <footer class="footer">
-      <a href="#" class="logo">
+      <a href="/" class="logo" aria-label="Go to homepage">
         <img class="logo__img" src="./images/logo.svg" alt="Blogr" />
       </a>
       <nav class="footer__nav">
-        <h4 class="footer__nav-title">Product</h4>
+        <h2 class="footer__nav-title">Product</h2>
         <ul class="footer__nav-list">
-          <li class="footer__nav-item">Overview</li>
-          <li class="footer__nav-item">Pricing</li>
-          <li class="footer__nav-item">Marketplace</li>
-          <li class="footer__nav-item">Features</li>
-          <li class="footer__nav-item">Integrations</li>
+          <li class="footer__nav-item"><a href="#Overview">Overview</a></li>
+          <li class="footer__nav-item"><a href="#Pricing">Pricing</a></li>
+          <li class="footer__nav-item">
+            <a href="#Marketplace">Marketplace</a>
+          </li>
+          <li class="footer__nav-item"><a href="#Features">Features</a></li>
+          <li class="footer__nav-item">
+            <a href="#Integrations">Integrations</a>
+          </li>
         </ul>
-        <h4 class="footer__nav-title">Company</h4>
+        <h2 class="footer__nav-title">Company</h2>
         <ul class="footer__nav-list">
-          <li class="footer__nav-item">About</li>
-          <li class="footer__nav-item">Team</li>
-          <li class="footer__nav-item">Blog</li>
-          <li class="footer__nav-item">Careers</li>
+          <li class="footer__nav-item"><a href="#About">About</a></li>
+          <li class="footer__nav-item"><a href="#Team">Team</a></li>
+          <li class="footer__nav-item"><a href="#Blog">Blog</a></li>
+          <li class="footer__nav-item"><a href="#Careers">Careers</a></li>
         </ul>
-        <h4 class="footer__nav-title">Connect</h4>
+        <h2 class="footer__nav-title">Connect</h2>
         <ul class="footer__nav-list">
-          <li class="footer__nav-item">Contact</li>
-          <li class="footer__nav-item">Newsletter</li>
-          <li class="footer__nav-item">LinkedIn</li>
+          <li class="footer__nav-item"><a href="#Contact">Contact</a></li>
+          <li class="footer__nav-item"><a href="#Newsletter">Newsletter</a></li>
+          <li class="footer__nav-item"><a href="#Linkedin">LinkedIn</a></li>
         </ul>
       </nav>
 
@@ -173,5 +246,6 @@
         >. Coded by <a href="#">ggandream</a>.
       </div>
     </footer>
+    <script src="./app.js"></script>
   </body>
 </html>
