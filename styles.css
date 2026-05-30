@@ -378,5 +378,5 @@ body {
 
 .upsidedown {
   transform: rotate(180deg);
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
 }
