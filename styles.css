@@ -539,7 +539,7 @@ body {
   text-align: center;
 
   @media (min-width: 768px) {
-    padding: 60px 25px;
+    padding: 80px 130px;
     .logo {
       padding-top: 0;
     }
