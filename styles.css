@@ -120,13 +120,17 @@ body {
       list-style-type: none;
       background-color: var(--white);
       border-radius: 4px;
-      padding: 16px 14px;
+      padding: 30px 22px 24px 22px;
+      margin-top: 22px;
       box-shadow: 7px 7px 14px 0px rgba(80, 79, 79, 0.3);
       position: absolute;
+      line-height: 2rem;
+      width: 180px;
     }
 
     .navigation__link {
       text-decoration: none;
+      color: var(--gray-900);
     }
 
     .navigation__session {
@@ -166,8 +170,13 @@ body {
 
 @media (hover: hover) {
   /* when hover is supported */
-  .logo:hover {
-    background-color: var(--red-500);
+
+  .navigation__link:hover {
+    font-weight: 800;
+  }
+
+  .navigation__item:hover {
+    text-decoration: underline;
   }
 }
 
@@ -336,18 +345,20 @@ body {
   color: var(--white);
 }
 
-.btn:hover {
-  background-color: var(--red-550);
-  color: var(--white);
+@media (hover: hover) {
+  .btn--primary:hover {
+    background-color: var(--red-400);
+    color: var(--white);
+    border: 1px solid transparent;
+  }
+
+  .btn--secondary:hover {
+    background-color: var(--white);
+    color: var(--red-400);
+    border: 1px solid transparent;
+  }
 }
 
-.nav__btn--secondary:hover {
-  background: linear-gradient(
-    150deg,
-    var(--red-550) 0%,
-    hsl(353, 80%, 24%) 100%
-  );
-}
 .main {
   padding: 80px 0px;
   display: flex;
@@ -363,8 +374,9 @@ body {
 
 .section {
   margin-bottom: 10px;
-
   @media (min-width: 768px) {
+    max-width: 1400px;
+    margin-inline: auto;
     padding: 0px 130px;
 
     .section__title {
@@ -539,7 +551,7 @@ body {
   text-align: center;
 
   @media (min-width: 768px) {
-    padding: 80px 130px;
+    padding: 80px 130px 24px;
     .logo {
       padding-top: 0;
     }
