@@ -1,6 +1,9 @@
 const $nav__items = document.querySelectorAll(".nav__item");
+
 const $header__menu = document.querySelector(".header__menu");
 const $dropdown = document.querySelector(".dropdown");
+
+const $navigation_items = document.querySelectorAll(".navigation__item");
 
 $nav__items.forEach(function (nav__item) {
   nav__item.addEventListener("click", function () {
@@ -31,4 +34,18 @@ $header__menu.addEventListener("click", function () {
     );
     $dropdown.setAttribute("aria-hidden", String(true));
   }
+});
+
+$navigation_items.forEach(function (item, index) {
+  item.addEventListener("click", () => {
+    item.nextElementSibling.classList.toggle("hidden");
+    item.firstElementChild.classList.toggle("upsidedown");
+
+    $navigation_items.forEach((btn, index2) => {
+      if (index2 !== index) {
+        btn.nextElementSibling.classList.add("hidden");
+        btn.firstElementChild.classList.remove("upsidedown");
+      }
+    });
+  });
 });
