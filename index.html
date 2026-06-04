@@ -20,181 +20,193 @@
   <body>
     <script src="./app.js" defer></script>
     <header class="header">
-      <div class="header__bar">
-        <a href="/" class="logo" aria-label="Go to homepage">
-          <img class="logo__img" src="./images/logo.svg" alt="Blogr" />
-        </a>
-        <button type="button" class="header__menu" aria-label="Open Menu">
-          <img src="./images/icon-hamburger.svg" alt="Menu" />
-        </button>
-      </div>
-
-      <nav class="navigation">
-        <div class="navigation__logo-menu">
+      <div class="header__inner">
+        <div class="header__bar">
           <a href="/" class="logo" aria-label="Go to homepage">
             <img class="logo__img" src="./images/logo.svg" alt="Blogr" />
           </a>
-          <ul class="navigation__menu">
-            <li class="navigation__item-menu">
-              <button type="button" class="navigation__item">
-                Product
-                <img
-                  class="nav__item-arrow"
-                  src="./images/icon-arrow-light.svg"
-                />
-              </button>
-              <ul class="navigation__dropdown hidden">
-                <li>
-                  <a class="navigation__link" href="#Overview">Overview</a>
-                </li>
-                <li><a class="navigation__link" href="#Pricing">Pricing</a></li>
-                <li>
-                  <a class="navigation__link" href="#Marketplace"
-                    >Marketplace</a
-                  >
-                </li>
-                <li>
-                  <a class="navigation__link" href="#Features">Features</a>
-                </li>
-                <li>
-                  <a class="navigation__link" href="#Integrations"
-                    >Integrations</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="navigation__item-menu">
-              <button type="button" class="navigation__item">
-                Company
-                <img
-                  class="nav__item-arrow"
-                  src="./images/icon-arrow-light.svg"
-                  alt=""
-                />
-              </button>
-              <ul class="navigation__dropdown hidden">
-                <li><a class="navigation__link" href="#About">About</a></li>
-                <li><a class="navigation__link" href="#Team">Team</a></li>
-                <li><a class="navigation__link" href="#Blog">Blog</a></li>
-                <li><a class="navigation__link" href="#Careers">Careers</a></li>
-              </ul>
-            </li>
-            <li class="navigation__item-menu">
-              <button type="button" class="navigation__item">
-                Connect
-                <img
-                  class="nav__item-arrow"
-                  src="./images/icon-arrow-light.svg"
-                  alt=""
-                />
-              </button>
-              <ul class="navigation__dropdown hidden">
-                <li><a class="navigation__link" href="#Contact">Contact</a></li>
-                <li>
-                  <a class="navigation__link" href="#Newsletter">Newsletter</a>
-                </li>
-                <li>
-                  <a class="navigation__link" href="#LinkedIn">LinkedIn</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <button type="button" class="header__menu" aria-label="Open Menu">
+            <img src="./images/icon-hamburger.svg" alt="Menu" />
+          </button>
         </div>
-        <div class="navigation__session">
-          <a href="#login" class="btn btn--third">Login</a>
-          <a href="#sign-up" class="btn btn--primary">Sign Up</a>
-        </div>
-      </nav>
-      <!-- Nav Mobile -->
-      <div class="dropdown hidden" aria-hidden="false">
-        <nav class="nav" aria-label="Main Menu">
-          <ul class="nav__menu">
-            <li>
-              <button
-                class="nav__item"
-                type="button"
-                aria-expanded="false"
-                aria-controls="nav__dropdown__1"
-              >
-                Product
-                <img
-                  class="nav__item-arrow"
-                  src="images/icon-arrow-dark.svg"
-                  alt=""
-                />
-              </button>
-              <div class="nav__dropdown hidden" id="nav__dropdown__1">
-                <a href="#Overview">Overview</a>
-                <a href="#Pricing">Pricing</a>
-                <a href="#Marketplace">Marketplace</a>
-                <a href="#Features">Features</a>
-                <a href="#Integrations">Integrations</a>
-              </div>
-            </li>
 
-            <li>
-              <button
-                class="nav__item"
-                type="button"
-                aria-expanded="false"
-                aria-controls="nav__dropdown__2"
-              >
-                Company
-                <img
-                  class="nav__item-arrow"
-                  src="images/icon-arrow-dark.svg"
-                  alt=""
-                />
-              </button>
-
-              <div class="nav__dropdown hidden" id="nav__dropdown__2">
-                <a href="#About">About</a>
-                <a href="#Team">Team</a>
-                <a href="#Blog">Blog</a>
-                <a href="#Careers">Careers</a>
-              </div>
-            </li>
-
-            <li>
-              <button
-                class="nav__item"
-                type="button"
-                aria-expanded="false"
-                aria-controls="nav__dropdown__3"
-              >
-                Connect
-                <img
-                  class="nav__item-arrow"
-                  src="images/icon-arrow-dark.svg"
-                  alt=""
-                />
-              </button>
-
-              <div class="nav__dropdown hidden" id="nav__dropdown__3">
-                <a href="#Contact">Contact</a>
-                <a href="#Newsletter">Newsletter</a>
-                <a href="#LinkedIn">LinkedIn</a>
-              </div>
-            </li>
-          </ul>
-          <div class="nav__session">
-            <a href="#login" class="btn nav__btn--primary">Login</a>
-            <a href="#sign-up" class="btn nav__btn--secondary">Sign Up</a>
+        <nav class="navigation">
+          <div class="navigation__logo-menu">
+            <a href="/" class="logo" aria-label="Go to homepage">
+              <img class="logo__img" src="./images/logo.svg" alt="Blogr" />
+            </a>
+            <ul class="navigation__menu">
+              <li class="navigation__item-menu">
+                <button type="button" class="navigation__item">
+                  Product
+                  <img
+                    class="nav__item-arrow"
+                    src="./images/icon-arrow-light.svg"
+                  />
+                </button>
+                <ul class="navigation__dropdown hidden">
+                  <li>
+                    <a class="navigation__link" href="#Overview">Overview</a>
+                  </li>
+                  <li>
+                    <a class="navigation__link" href="#Pricing">Pricing</a>
+                  </li>
+                  <li>
+                    <a class="navigation__link" href="#Marketplace"
+                      >Marketplace</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navigation__link" href="#Features">Features</a>
+                  </li>
+                  <li>
+                    <a class="navigation__link" href="#Integrations"
+                      >Integrations</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item-menu">
+                <button type="button" class="navigation__item">
+                  Company
+                  <img
+                    class="nav__item-arrow"
+                    src="./images/icon-arrow-light.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="navigation__dropdown hidden">
+                  <li><a class="navigation__link" href="#About">About</a></li>
+                  <li><a class="navigation__link" href="#Team">Team</a></li>
+                  <li><a class="navigation__link" href="#Blog">Blog</a></li>
+                  <li>
+                    <a class="navigation__link" href="#Careers">Careers</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item-menu">
+                <button type="button" class="navigation__item">
+                  Connect
+                  <img
+                    class="nav__item-arrow"
+                    src="./images/icon-arrow-light.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="navigation__dropdown hidden">
+                  <li>
+                    <a class="navigation__link" href="#Contact">Contact</a>
+                  </li>
+                  <li>
+                    <a class="navigation__link" href="#Newsletter"
+                      >Newsletter</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navigation__link" href="#LinkedIn">LinkedIn</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="navigation__session">
+            <a href="#login" class="btn btn--third">Login</a>
+            <a href="#sign-up" class="btn btn--primary">Sign Up</a>
           </div>
         </nav>
-      </div>
+        <!-- Nav Mobile -->
+        <div class="dropdown hidden" aria-hidden="false">
+          <nav class="nav" aria-label="Main Menu">
+            <ul class="nav__menu">
+              <li>
+                <button
+                  class="nav__item"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="nav__dropdown__1"
+                >
+                  Product
+                  <img
+                    class="nav__item-arrow"
+                    src="images/icon-arrow-dark.svg"
+                    alt=""
+                  />
+                </button>
+                <div class="nav__dropdown hidden" id="nav__dropdown__1">
+                  <a href="#Overview">Overview</a>
+                  <a href="#Pricing">Pricing</a>
+                  <a href="#Marketplace">Marketplace</a>
+                  <a href="#Features">Features</a>
+                  <a href="#Integrations">Integrations</a>
+                </div>
+              </li>
 
-      <section class="hero">
-        <h1 class="hero__title">A modern publishing platform</h1>
-        <p class="hero__subtitle">
-          Grow your audience and build your online brand
-        </p>
+              <li>
+                <button
+                  class="nav__item"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="nav__dropdown__2"
+                >
+                  Company
+                  <img
+                    class="nav__item-arrow"
+                    src="images/icon-arrow-dark.svg"
+                    alt=""
+                  />
+                </button>
 
-        <div class="hero__actions">
-          <a href="#start-for-free" class="btn btn--primary">Start for Free</a>
-          <a href="#learn-more" class="btn btn--secondary">Learn More</a>
+                <div class="nav__dropdown hidden" id="nav__dropdown__2">
+                  <a href="#About">About</a>
+                  <a href="#Team">Team</a>
+                  <a href="#Blog">Blog</a>
+                  <a href="#Careers">Careers</a>
+                </div>
+              </li>
+
+              <li>
+                <button
+                  class="nav__item"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="nav__dropdown__3"
+                >
+                  Connect
+                  <img
+                    class="nav__item-arrow"
+                    src="images/icon-arrow-dark.svg"
+                    alt=""
+                  />
+                </button>
+
+                <div class="nav__dropdown hidden" id="nav__dropdown__3">
+                  <a href="#Contact">Contact</a>
+                  <a href="#Newsletter">Newsletter</a>
+                  <a href="#LinkedIn">LinkedIn</a>
+                </div>
+              </li>
+            </ul>
+            <div class="nav__session">
+              <a href="#login" class="btn nav__btn--primary">Login</a>
+              <a href="#sign-up" class="btn nav__btn--secondary">Sign Up</a>
+            </div>
+          </nav>
         </div>
-      </section>
+
+        <section class="hero">
+          <h1 class="hero__title">A modern publishing platform</h1>
+          <p class="hero__subtitle">
+            Grow your audience and build your online brand
+          </p>
+
+          <div class="hero__actions">
+            <a href="#start-for-free" class="btn btn--primary"
+              >Start for Free</a
+            >
+            <a href="#learn-more" class="btn btn--secondary">Learn More</a>
+          </div>
+        </section>
+      </div>
     </header>
 
     <main class="main">
