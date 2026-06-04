@@ -5,6 +5,10 @@ const $dropdown = document.querySelector(".dropdown");
 
 const $navigation_items = document.querySelectorAll(".navigation__item");
 
+const $main = document.querySelector("main");
+const $footer = document.querySelector("footer");
+const $hero = document.querySelector(".hero");
+
 $nav__items.forEach(function (nav__item) {
   nav__item.addEventListener("click", function () {
     nav__item.nextElementSibling.classList.toggle("hidden");
@@ -47,5 +51,26 @@ $navigation_items.forEach(function (item, index) {
         btn.firstElementChild.classList.remove("upsidedown");
       }
     });
+  });
+});
+
+$main.addEventListener("click", () => {
+  $navigation_items.forEach((btn) => {
+    btn.nextElementSibling.classList.add("hidden");
+    btn.firstElementChild.classList.remove("upsidedown");
+  });
+});
+
+$footer.addEventListener("click", () => {
+  $navigation_items.forEach((btn) => {
+    btn.nextElementSibling.classList.add("hidden");
+    btn.firstElementChild.classList.remove("upsidedown");
+  });
+});
+
+$hero.addEventListener("click", () => {
+  $navigation_items.forEach((btn) => {
+    btn.nextElementSibling.classList.add("hidden");
+    btn.firstElementChild.classList.remove("upsidedown");
   });
 });
