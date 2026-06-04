@@ -7,7 +7,7 @@ const $navigation_items = document.querySelectorAll(".navigation__item");
 
 const $main = document.querySelector("main");
 const $footer = document.querySelector("footer");
-const $hero = document.querySelector(".hero");
+const $header = document.querySelector(".header");
 
 $nav__items.forEach(function (nav__item) {
   nav__item.addEventListener("click", function () {
@@ -68,9 +68,11 @@ $footer.addEventListener("click", () => {
   });
 });
 
-$hero.addEventListener("click", () => {
-  $navigation_items.forEach((btn) => {
-    btn.nextElementSibling.classList.add("hidden");
-    btn.firstElementChild.classList.remove("upsidedown");
-  });
+$header.addEventListener("click", (e) => {
+  if (!e.target.closest(".navigation__item")) {
+    $navigation_items.forEach((btn) => {
+      btn.nextElementSibling.classList.add("hidden");
+      btn.firstElementChild.classList.remove("upsidedown");
+    });
+  }
 });
