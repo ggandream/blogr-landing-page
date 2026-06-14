@@ -262,7 +262,7 @@ body {
   flex-direction: column;
   justify-content: center;
   line-height: 2rem;
-  transition-property: opacity, display;
+  transition-property: opacity, display, height;
   transition-duration: 0.25s;
   transition-behavior: allow-discrete;
 }
@@ -658,4 +658,11 @@ body {
 
 .upsidedown {
   transform: rotate(180deg);
+}
+
+@starting-style {
+  .hidden {
+    height: 0;
+    opacity: 0;
+  }
 }

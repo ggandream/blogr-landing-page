@@ -5,16 +5,26 @@ const $dropdown = document.querySelector(".dropdown");
 
 const $navigation_items = document.querySelectorAll(".navigation__item");
 
-const $main = document.querySelector("main");
-const $footer = document.querySelector("footer");
-const $header = document.querySelector(".header");
+// const $main = document.querySelector("main");
+// const $footer = document.querySelector("footer");
+const $html = document.querySelector("html");
 
-$nav__items.forEach(function (nav__item) {
+$nav__items.forEach(function (nav__item, index) {
   nav__item.addEventListener("click", function () {
+    const isExpanded = nav__item.getAttribute("aria-expanded") === "true";
+
+    $nav__items.forEach((navItem2, index2) => {
+      if (index !== index2) {
+        navItem2.nextElementSibling.classList.add("hidden");
+        navItem2.firstElementChild.classList.remove("upsidedown");
+        navItem2.setAttribute("aria-expanded", String(!isExpanded));
+      }
+    });
+
     nav__item.nextElementSibling.classList.toggle("hidden");
     nav__item.firstElementChild.classList.toggle("upsidedown");
+    const navItemId = nav__item.getAttribute("id");
 
-    const isExpanded = nav__item.getAttribute("aria-expanded") === "true";
     nav__item.setAttribute("aria-expanded", String(!isExpanded));
   });
 });
@@ -52,23 +62,16 @@ $navigation_items.forEach(function (item, index) {
       }
     });
   });
-});
 
-$main.addEventListener("click", () => {
-  $navigation_items.forEach((btn) => {
-    btn.nextElementSibling.classList.add("hidden");
-    btn.firstElementChild.classList.remove("upsidedown");
+  item.addEventListener("keyup", (e) => {
+    if (e.key == "Escape") {
+      item.nextElementSibling.classList.toggle("hidden");
+      item.firstElementChild.classList.toggle("upsidedown");
+    }
   });
 });
 
-$footer.addEventListener("click", () => {
-  $navigation_items.forEach((btn) => {
-    btn.nextElementSibling.classList.add("hidden");
-    btn.firstElementChild.classList.remove("upsidedown");
-  });
-});
-
-$header.addEventListener("click", (e) => {
+$html.addEventListener("click", (e) => {
   if (!e.target.closest(".navigation__item")) {
     $navigation_items.forEach((btn) => {
       btn.nextElementSibling.classList.add("hidden");
