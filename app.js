@@ -5,6 +5,8 @@ const $dropdown = document.querySelector(".dropdown");
 
 const $navigation_items = document.querySelectorAll(".navigation__item");
 
+const $navigation__menu = document.querySelector(".navigation__menu");
+
 // const $main = document.querySelector("main");
 // const $footer = document.querySelector("footer");
 const $html = document.querySelector("html");
@@ -50,25 +52,48 @@ $header__menu.addEventListener("click", function () {
   }
 });
 
-$navigation_items.forEach(function (item, index) {
-  item.addEventListener("click", () => {
-    item.nextElementSibling.classList.toggle("hidden");
-    item.firstElementChild.classList.toggle("upsidedown");
+// $navigation_items.forEach(function (item, index) {
+//   item.addEventListener("click", () => {
+//     item.nextElementSibling.classList.toggle("hidden");
+//     item.firstElementChild.classList.toggle("upsidedown");
 
-    $navigation_items.forEach((btn, index2) => {
-      if (index2 !== index) {
-        btn.nextElementSibling.classList.add("hidden");
-        btn.firstElementChild.classList.remove("upsidedown");
-      }
-    });
-  });
+//     $navigation_items.forEach((btn, index2) => {
+//       if (index2 !== index) {
+//         btn.nextElementSibling.classList.add("hidden");
+//         btn.firstElementChild.classList.remove("upsidedown");
+//       }
+//     });
+//   });
 
-  item.addEventListener("keyup", (e) => {
-    if (e.key == "Escape") {
-      item.nextElementSibling.classList.toggle("hidden");
-      item.firstElementChild.classList.toggle("upsidedown");
+//   item.addEventListener("keyup", (e) => {
+//     if (e.key == "Escape") {
+//       item.nextElementSibling.classList.toggle("hidden");
+//       item.firstElementChild.classList.toggle("upsidedown");
+//     }
+//   });
+// });
+
+$navigation__menu.addEventListener("click", (e) => {
+  if (e.target.matches(".navigation__item")) {
+    e.target.nextElementSibling.classList.toggle("hidden");
+    e.target.firstElementChild.classList.toggle("upsidedown");
+  }
+
+  $navigation_items.forEach((item) => {
+    if (item !== e.target) {
+      item.nextElementSibling.classList.add("hidden");
+      item.firstElementChild.classList.remove("upsidedown");
     }
   });
+});
+
+$navigation__menu.addEventListener("keyup", (e) => {
+  if (e.key === "Escape") {
+    if (e.target.matches(".navigation__item")) {
+      e.target.nextElementSibling.classList.toggle("hidden");
+      e.target.firstElementChild.classList.toggle("upsidedown");
+    }
+  }
 });
 
 $html.addEventListener("click", (e) => {
