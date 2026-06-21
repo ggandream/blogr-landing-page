@@ -264,12 +264,12 @@ body {
   line-height: 2rem;
   height: 0;
   overflow: hidden;
-  transition-property: height;
+
   transition: all 0.25s ease;
 }
 
 .dd-active {
-  height: auto;
+  height: 190px;
   padding: 20px 5px;
 }
 
