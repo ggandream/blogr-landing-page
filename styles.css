@@ -254,6 +254,7 @@ body {
 }
 
 .nav__dropdown {
+  border-radius: 4px;
   padding: 0; /* 20px 5px; */
   background-color: rgb(238, 236, 236);
 
