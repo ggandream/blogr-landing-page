@@ -1,4 +1,5 @@
 const $nav__items = document.querySelectorAll(".nav__item");
+const $nav__dropdowns = document.querySelectorAll(".nav__dropdown");
 
 const $header__menu = document.querySelector(".header__menu");
 const $dropdown = document.querySelector(".dropdown");
@@ -15,19 +16,29 @@ $nav__items.forEach(function (nav__item, index) {
   nav__item.addEventListener("click", function () {
     const isExpanded = nav__item.getAttribute("aria-expanded") === "true";
 
-    $nav__items.forEach((navItem2, index2) => {
-      if (index !== index2) {
-        navItem2.nextElementSibling.classList.add("hidden");
-        navItem2.firstElementChild.classList.remove("upsidedown");
-        navItem2.setAttribute("aria-expanded", String(!isExpanded));
+    $nav__dropdowns.forEach((dropdown, index2) => {
+      if (index2 !== index) {
+        $nav__dropdowns[index2].classList.remove("dd-active");
+        $nav__dropdowns[
+          index2
+        ].previousElementSibling.firstElementChild.classList.remove(
+          "upsidedown",
+        );
+        $nav__dropdowns[index2].previousElementSibling.setAttribute(
+          "aria-expanded",
+          String(false),
+        );
       }
     });
 
-    nav__item.nextElementSibling.classList.toggle("hidden");
-    nav__item.firstElementChild.classList.toggle("upsidedown");
-    const navItemId = nav__item.getAttribute("id");
-
-    nav__item.setAttribute("aria-expanded", String(!isExpanded));
+    $nav__dropdowns[index].classList.toggle("dd-active");
+    $nav__dropdowns[
+      index
+    ].previousElementSibling.firstElementChild.classList.toggle("upsidedown");
+    $nav__dropdowns[index].previousElementSibling.setAttribute(
+      "aria-expanded",
+      String(!isExpanded),
+    );
   });
 });
 

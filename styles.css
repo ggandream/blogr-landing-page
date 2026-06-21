@@ -254,17 +254,22 @@ body {
 }
 
 .nav__dropdown {
-  border-radius: 4px;
-  padding: 20px 5px;
+  padding: 0; /* 20px 5px; */
   background-color: rgb(238, 236, 236);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   line-height: 2rem;
-  transition-property: opacity, display, height;
-  transition-duration: 0.25s;
-  transition-behavior: allow-discrete;
+  height: 0;
+  overflow: hidden;
+  transition-property: height;
+  transition: all 0.25s ease;
+}
+
+.dd-active {
+  height: auto;
+  padding: 20px 5px;
 }
 
 .nav__dropdown > a {
