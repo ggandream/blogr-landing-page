@@ -262,14 +262,14 @@ body {
   flex-direction: column;
   justify-content: center;
   line-height: 2rem;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
 
-  transition: all 0.5s ease;
+  transition: all 0.25s ease;
 }
 
 .dd-active {
-  height: 190px;
+  max-height: 200px;
   padding: 20px 5px;
 }
 
