@@ -265,7 +265,7 @@ body {
   max-height: 0;
   overflow: hidden;
 
-  transition: all 0.25s ease;
+  transition: all 0.25s ease-in-out;
 }
 
 .dd-active {
