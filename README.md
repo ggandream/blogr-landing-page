@@ -100,7 +100,6 @@ where the experience could be better for keyboard and screen-reader users.
 
 ## Author
 
-- Name - 👉 Andrea (add a website/portfolio link if you have one)
 - Frontend Mentor - [@ggandream](https://www.frontendmentor.io/profile/ggandream)
 - GitHub - [@ggandream](https://github.com/ggandream)
 
