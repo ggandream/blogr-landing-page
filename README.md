@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [👉 Add your Frontend Mentor solution URL](https://www.frontendmentor.io/solutions/blogr-landing-page-oeAqxFkdiD)
-- Live Site URL: [👉 Add your live site URL](https://ggandream.github.io/blogr-landing-page/)
+- Solution URL: [My Solution in FrontendMentor](https://www.frontendmentor.io/solutions/blogr-landing-page-oeAqxFkdiD)
+- Live Site URL: [blogr-landing-page](https://ggandream.github.io/blogr-landing-page/)
 
 ## My process
 
